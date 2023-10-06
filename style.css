@@ -1,0 +1,85 @@
+:root{
+  --orangePrimary: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+body{
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--veryDarkBlue);
+  color: var(--white);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card{
+  max-width: 380px;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  background: radial-gradient(circle, rgba(32, 40, 50, 1) 15%, rgba(22, 30, 40, 1) 67%);
+  box-shadow: 5px 5px 5px var(--veryDarkBlue);
+  & img{
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--darkBlue);
+  }
+  & h1{
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--white);
+  }
+  & p{
+    margin-top: .5rem;
+    font-size: 1.05rem;
+    color: var(--lightGrey);
+    line-height: 1.8;
+  }
+  & .clasification{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+    & span{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      align-self: center;
+      aspect-ratio: 1;
+      background-color: var(--darkBlue);
+      color: var(--white);
+      border-radius: 50%;
+      transition: background-color .2s ease-in-out;
+    }
+    & span:hover{
+      background-color: var(--orangePrimary);
+      transition: background-color .2s ease-in-out;
+    }
+  }
+  & input{
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: .8rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--orangePrimary);
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
+  & input:hover{
+    color: var(--orangePrimary);
+    background-color: var(--white);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
+
+}
