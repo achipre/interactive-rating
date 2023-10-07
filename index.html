@@ -9,49 +9,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
   <main class="card">
-    <img src="./images/icon-star.svg" alt="Icono Logo" />
-    <h1>How did we do?</h1>
-    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    <div class="clasification">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
+    <div class="stepOne">
+      <img src="./images/icon-star.svg" alt="Icono Logo" />
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <div class="clasification">
+        <input type="radio" name="rating" id="1" hidden />
+        <label for="1">1</label>
+        <input type="radio" name="rating" id="2" hidden />
+        <label for="2">2</label>
+        <input type="radio" name="rating" id="3" hidden />
+        <label for="3">3</label>
+        <input type="radio" name="rating" id="4" hidden />
+        <label for="4">4</label>
+        <input type="radio" name="rating" id="5" hidden />
+        <label for="5" >5</label>
+      </div>
+      <input id="submit" type="submit" value="SUBMIT">
     </div>
-    <input type="submit" value="SUBMIT">
+    
+    <div class="success hidden">
+      <img class="imgSuccess" src="./images/illustration-thank-you.svg" alt="">
+      <p class="selection">You selected <span id="numberSelected"></span> out of 5</p>
+      <h2>Thank you!</h2>
+      <p class="successparagraph">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+    </div>
   </main>
-  
-
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  <!-- You selected  out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
-
-  <!-- Thank you state end -->
-
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  <script src="./main.js"></script>
 </body>
 </html>
